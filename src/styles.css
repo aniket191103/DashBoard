@@ -1,9 +1,10 @@
+/* Global styles */
 body {
-    font-family: 'Arial', sans-serif; /* Consistent font across the dashboard */
-    background-color: #f5f5f5; /* Light grey background */
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    color: #333; /* General text color */
+    color: #333;
 }
 
 /* Container styles */
@@ -11,10 +12,11 @@ body {
     margin-top: 32px;
     display: flex;
     flex-direction: column;
-    padding: 16px; /* Padding around the container */
-    background-color: #e0e0e0; /* Slightly darker grey background */
-    position: relative; /* Set relative positioning to contain the absolute positioned child */
-    padding-right: 300px; /* Adjust this value as needed to ensure space for the employeeOfMonth div */
+    padding: 16px;
+    background-color: #ffffff;
+    position: relative;
+    padding-right: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Card styles */
@@ -24,16 +26,23 @@ body {
     color: #333;
     margin-bottom: 16px;
     transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
-    background-color: #ffffff; /* White background */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 16px; /* Font size */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .paper:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     transform: translateY(-8px);
-    background-color: #f0f8ff; /* Alice blue background */
+    background-color: #888888b5;
+}
+
+/* Navbar styles */
+.navbar-brand {
+    color: white;
+    /* background-color: blue; */
 }
 
 /* Avatar styles */
@@ -43,7 +52,8 @@ body {
     height: 56px;
     border-radius: 50%;
     transition: transform 0.3s ease;
-    border: 2px solid #ddd; /* Border around avatar */
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .avatar:hover {
@@ -52,34 +62,34 @@ body {
 
 /* Status change styles */
 .positiveChange {
-    color: green;
-    font-weight: bold; /* Bold font for positive change */
+    color: #28a745;
+    font-weight: bold;
 }
 
 .negativeChange {
-    color: red;
-    font-weight: bold; /* Bold font for negative change */
+    color: #dc3545;
+    font-weight: bold;
 }
 
 /* Employee of the month styles */
 .employeeOfMonth {
     position: absolute;
     top: 16px;
-    right: -250px; /* Adjust this value as needed to ensure it does not overlap */
+    right: -250px;
     width: 250px;
     text-align: center;
     padding: 16px;
     transition: background-color 0.3s ease;
-    background-color: #fffbea; /* Light yellow background */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 18px; /* Font size */
-    color: #444; /* Text color */
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #856404;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .employeeOfMonth:hover {
-    background-color: #ffebcd; /* Blanched almond background */
+    background-color: #ffeeba;
 }
 
 .employeeImage {
@@ -88,27 +98,40 @@ body {
     border-radius: 50%;
     display: block;
     margin: 0 auto;
-    border: 2px solid #ddd; /* Border around employee image */
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* List styles */
 .ul {
     display: grid;
-    grid-template-columns: 1.5fr 1.2fr 3fr 3fr 2fr; 
+    grid-template-columns: 1.5fr 1.2fr 3fr 3fr 2fr;
     align-items: center;
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 16px; /* Add margin to separate from employee cards */
-    background-color: #e3f2fd; /* Very light blue background */
-    border-radius: 8px; /* Rounded corners */
-    border: 1px solid #ddd; /* Light border */
-    font-size: 14px; /* Font size */
+    margin-bottom: 16px;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .ul li {
     text-align: center;
     padding: 8px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.ul li:last-child {
+    border-right: none;
 }
 
 .li1 {
@@ -133,132 +156,128 @@ body {
     grid-column: 5;
 }
 
-/* Large desktops and laptops */
+/* Media Queries */
 @media screen and (max-width: 1200px) {
     .container {
-        margin-top: 28px; /* Adjusted margin-top for large screens */
+        margin-top: 28px;
     }
 
     .paper {
-        padding: 14px; /* Adjusted padding for large screens */
-        margin-bottom: 14px; /* Adjusted margin-bottom for large screens */
+        padding: 14px;
+        margin-bottom: 14px;
     }
 }
 
-/* Tablets and small desktops */
 @media screen and (max-width: 992px) {
     .container {
-        margin-top: 24px; /* Adjusted margin-top for tablets and small desktops */
+        margin-top: 24px;
     }
 
     .paper {
-        padding: 12px; /* Adjusted padding for tablets and small desktops */
-        margin-bottom: 12px; /* Adjusted margin-bottom for tablets and small desktops */
+        padding: 12px;
+        margin-bottom: 12px;
     }
 
     .avatar {
-        width: 52px; /* Decreased width for tablets and small desktops */
-        height: 52px; /* Decreased height for tablets and small desktops */
+        width: 52px;
+        height: 52px;
     }
 
     .employeeImage {
-        width: 52px; /* Decreased width for tablets and small desktops */
-        height: 52px; /* Decreased height for tablets and small desktops */
+        width: 52px;
+        height: 52px;
     }
 
     .ul {
-        grid-template-columns: 1.5fr 1fr 2.5fr 2.5fr 1.5fr; /* Adjusted columns for tablets and small desktops */
+        grid-template-columns: 1.5fr 1fr 2.5fr 2.5fr 1.5fr;
     }
 
     .li3 {
-        margin-right: -50px; /* Adjusted margin for tablets and small desktops */
+        margin-right: -50px;
     }
 
     .li4 {
-        margin-right: -10px; /* Adjusted margin for tablets and small desktops */
+        margin-right: -10px;
     }
 
     .employeeOfMonth {
-        position: static; /* Reset position to default */
+        position: static;
         width: auto;
-        margin-top: 16px; /* Adjusted margin-top for tablets and small desktops */
-        margin-bottom: 16px; /* Added margin-bottom to separate from other elements */
+        margin-top: 16px;
+        margin-bottom: 16px;
     }
 }
 
-/* Mobile devices (large) */
 @media screen and (max-width: 768px) {
     .container {
-        margin-top: 20px; /* Adjusted margin-top for large mobile devices */
+        margin-top: 20px;
     }
 
     .paper {
-        padding: 10px; /* Adjusted padding for large mobile devices */
-        margin-bottom: 10px; /* Adjusted margin-bottom for large mobile devices */
+        padding: 10px;
+        margin-bottom: 10px;
     }
 
     .avatar {
-        width: 50px; /* Decreased width for large mobile devices */
-        height: 50px; /* Decreased height for large mobile devices */
+        width: 50px;
+        height: 50px;
     }
 
     .employeeImage {
-        width: 50px; /* Decreased width for large mobile devices */
-        height: 50px; /* Decreased height for large mobile devices */
+        width: 50px;
+        height: 50px;
     }
 
     .ul {
-        grid-template-columns: repeat(5, 1fr); /* Simplify layout for large mobile devices */
+        grid-template-columns: repeat(5, 1fr);
     }
-    
+
     .li3, .li4 {
-        margin-right: 0; /* Remove margin for better fit on large mobile devices */
+        margin-right: 0;
     }
-    
+
     .employeeOfMonth {
-        position: static; /* Reset position to default */
+        position: static;
         width: auto;
-        margin-top: 16px; /* Adjusted margin-top for large mobile devices */
-        margin-bottom: 16px; /* Added margin-bottom to separate from other elements */
+        margin-top: 16px;
+        margin-bottom: 16px;
     }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        margin-top: 16px;
     }
-    
-    /* Mobile devices (small) */
-    @media screen and (max-width: 576px) {
-        .container {
-            margin-top: 16px; /* Adjusted margin-top for small mobile devices */
-        }
-    
-        .paper {
-            padding: 8px; /* Reduced padding for small mobile devices */
-            margin-bottom: 8px; /* Reduced margin-bottom for small mobile devices */
-        }
-    
-        .avatar {
-            width: 48px; /* Decreased width for small mobile devices */
-            height: 48px; /* Decreased height for small mobile devices */
-        }
-    
-        .employeeOfMonth {
-            padding: 8px; /* Reduced padding for small mobile devices */
-            margin-top: 16px; /* Adjusted margin-top for small mobile devices */
-        }
-    
-        .employeeImage {
-            width: 48px; /* Decreased width for small mobile devices */
-            height: 48px; /* Decreased height for small mobile devices */
-        }
-    
-        .ul {
-            grid-template-columns: repeat(5, 1fr); /* Simplify layout for small mobile devices */
-        }
-    
-        .ul li {
-            padding: 8px; /* Reduced padding for small mobile devices */
-        }
-    
-        .li3, .li4 {
-            margin-right: 0; /* Remove margin for better fit on small mobile devices */
-        }
+
+    .paper {
+        padding: 8px;
+        margin-bottom: 8px;
     }
-    
+
+    .avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .employeeOfMonth {
+        padding: 8px;
+        margin-top: 16px;
+    }
+
+    .employeeImage {
+        width: 48px;
+        height: 48px;
+    }
+
+    .ul {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .ul li {
+        padding: 8px;
+    }
+
+    .li3, .li4 {
+        margin-right: 0;
+    }
+}

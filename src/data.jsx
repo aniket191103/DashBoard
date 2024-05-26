@@ -17,8 +17,8 @@ export const employees = [
     { image: Harsha, rank: 4, name: 'Harsha Shivhare', designation: 'Designer', hours: 37, change: 1.5, changePositive: true },
     { image: Vanhi, rank: 5, name: 'Vanhi Rai', designation: 'Video Editor', hours: 37, change: 1.5, changePositive: false },
     { image: Bhanu, rank: 6, name: 'Bhanu Sharma', designation: 'Business Analyst', hours: 32, change: 1.5, changePositive: false },
-    { image: Sunil, rank: 8, name: 'Sunil Yadav', designation: 'Developer', hours: 24, change: 1.5, changePositive: true },
-    { image: Akaash, rank: 9, name: 'Akash Roy', designation: 'Business Analyst', hours: 21, change: 1.5, changePositive: false },
-    { image: Rohit, rank: 10, name: 'Rohit Soni', designation: 'Developer', hours: 20, change: 1.5, changePositive: false },
-    { image: Suraj, rank: 11, name: 'Suraj Chauhan', designation: 'Developer', hours: 18, change: 1.5, changePositive: false },
+    { image: Sunil, rank: 7, name: 'Sunil Yadav', designation: 'Developer', hours: 24, change: 1.5, changePositive: true },
+    { image: Akaash, rank: 8, name: 'Akash Roy', designation: 'Business Analyst', hours: 21, change: 1.5, changePositive: false },
+    { image: Rohit, rank: 9, name: 'Rohit Soni', designation: 'Developer', hours: 20, change: 1.5, changePositive: false },
+    { image: Suraj, rank: 10, name: 'Suraj Chauhan', designation: 'Developer', hours: 18, change: 1.5, changePositive: false },
 ];

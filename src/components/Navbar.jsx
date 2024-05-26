@@ -14,14 +14,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Employee Activity Dashboard</a>
+        <a className="navbar-brand text-light font-weight-bold" href="#">Employee Activity Dashboard</a>
         <div className="d-flex flex-column">
-          <span className="navbar-text">
+          <span className="navbar-text text-light">
             Current Date: {currentDateTime.toLocaleDateString()}
           </span>
-          <span className="navbar-text">
+          <span className="navbar-text text-light">
             Current Time: {currentDateTime.toLocaleTimeString()}
           </span>
         </div>
